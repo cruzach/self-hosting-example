@@ -3,30 +3,34 @@
     "name": "self-hosting-test",
     "slug": "self-hosting-test",
     "privacy": "public",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "test.selfhosting.cruzan"
     },
     "android": {
       "package": "test.selfhosting.cruzan"
+    },
+    "hooks": {
+      "postExport": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "charlie-cruzan",
+            "project": "sentry-test",
+            "authToken": "2fd05f18db254968beb765930bbf5030a5c61a9fbd0942828ddfe95ee352d094"
+          }
+        }
+      ]
     }
   }
 }
