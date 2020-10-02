@@ -34,7 +34,7 @@ export default function HomeScreen() {
           </View>
 
           <Button
-            title="throw an error"
+            title="sdk 39"
             onPress={() => {
               throw new Error("expo export sourcemaps r cool");
             }}
