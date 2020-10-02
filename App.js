@@ -61,3 +61,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
 });
+
+const hello = some.undefined.value;

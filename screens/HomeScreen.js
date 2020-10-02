@@ -30,7 +30,7 @@ export default function HomeScreen() {
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           >
-            <MonoText>{notagoodvariable}</MonoText>
+            <MonoText>hi</MonoText>
           </View>
 
           <Button
